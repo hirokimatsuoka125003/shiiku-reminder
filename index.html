@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>飼育リマインダー</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="飼育メモ">
+<meta name="theme-color" content="#0f172a">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+<style>
+:root{--bg:#f1f5f9;--card:#fff;--tx:#0f172a;--mu:#64748b;--bd:#e2e8f0;--inp:#f1f5f9;--sky:#0ea5e9;--grn:#16a34a;--red:#e11d48}
+@media(prefers-color-scheme:dark){:root{--bg:#020617;--card:#1e293b;--tx:#f1f5f9;--mu:#94a3b8;--bd:#334155;--inp:#334155}}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--tx);font-family:-apple-system,BlinkMacSystemFont,"Hiragino Sans","Yu Gothic",Segoe UI,sans-serif;display:flex;flex-direction:column;-webkit-user-select:none;user-select:none}
+input{-webkit-user-select:text;user-select:text}
+button{font:inherit;color:inherit;border:0;background:none;cursor:pointer;padding:0}
+button:active,label:active{transform:scale(.95)}
+svg.i{width:1em;height:1em;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;vertical-align:-.125em}
+svg.f{fill:currentColor;stroke:none}
+header{padding:calc(env(safe-area-inset-top,0px) + 12px) 16px 12px;background:var(--card);border-bottom:1px solid var(--bd)}
+.bar{max-width:760px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.logo{width:36px;height:36px;border-radius:12px;background:linear-gradient(135deg,#0ea5e9,#10b981);color:#fff;display:flex;align-items:center;justify-content:center;margin-right:10px}
+h1{font-size:18px;margin:0}.sub{font-size:12px;color:var(--mu);margin:0}
+.hb{width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:18px;color:var(--mu)}
+.hb.p{background:var(--sky);color:#fff;margin-left:6px}
+main{flex:1;overflow-y:auto;-webkit-overflow-scrolling:touch;padding:20px 16px calc(env(safe-area-inset-bottom,0px) + 40px)}
+#grid{max-width:760px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:24px;padding:18px;box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.top{display:flex;gap:14px;align-items:flex-start}
+.thumb{position:relative;flex:none}
+.pic{width:80px;height:80px;border-radius:16px;overflow:hidden;display:flex;align-items:center;justify-content:center;color:#fff;font-size:34px}
+.pic img{width:100%;height:100%;object-fit:cover}
+.fish{background:linear-gradient(135deg,#38bdf8,#2563eb)}.rep{background:linear-gradient(135deg,#34d399,#16a34a)}
+.mini{position:absolute;top:-6px;width:28px;height:28px;border-radius:50%;background:var(--card);border:1px solid var(--bd);box-shadow:0 2px 6px rgba(0,0,0,.15);font-size:12px;display:flex;align-items:center;justify-content:center;color:var(--mu)}
+.info{flex:1;min-width:0}
+.row{display:flex;align-items:center;justify-content:space-between;gap:6px}
+h3{margin:0;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.act{display:flex;align-items:flex-start;gap:6px;flex:none}
+.sbox{display:flex;flex-direction:column;align-items:center}
+.sbtn{width:28px;height:28px;border-radius:50%;background:var(--inp);border:1px solid var(--bd);color:var(--mu);display:flex;align-items:center;justify-content:center;font-size:13px}
+.sbox small{font-size:10px;color:var(--mu);white-space:nowrap;margin-top:2px}
+.del{color:var(--mu);font-size:15px;padding:4px}
+.last{font-size:12px;color:var(--mu);margin:4px 0 8px}
+.badge{display:inline-block;font-size:11px;font-weight:600;padding:2px 10px;border-radius:99px;border:1px solid #86efac;color:var(--grn)}
+.card:not(.rep-c) .badge{border-color:#7dd3fc;color:var(--sky)}
+.card .badge.none{border-color:var(--bd);color:var(--mu)}
+.count{margin:14px 0 8px;padding:12px 16px;border-radius:16px;background:var(--inp);display:flex;justify-content:space-between;align-items:center}
+.count span{font-size:12px;font-weight:600;color:var(--mu)}
+.count b{font-size:32px;font-weight:800;color:var(--sky)}.rep-c .count b{color:var(--grn)}
+.main{width:100%;padding:12px;border-radius:16px;color:#fff;font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:8px}
+.main.fish{background:linear-gradient(90deg,#0ea5e9,#2563eb)}.main.rep{background:linear-gradient(90deg,#10b981,#16a34a)}
+#empty{display:none;text-align:center;padding:60px 16px;color:var(--mu)}
+#empty h3{color:var(--tx);font-size:18px;margin-bottom:6px;white-space:normal}
+#empty .main{width:auto;display:inline-flex;padding:10px 22px;border-radius:99px;margin-top:18px}
+/* モーダルは display で切替（CDNや透過クラスに依存しない） */
+.modal{display:none;position:fixed;inset:0;z-index:50;background:rgba(15,23,42,.6);align-items:flex-end;justify-content:center}
+.modal.open{display:flex}
+.sheet{background:var(--card);width:100%;max-width:480px;border-radius:24px 24px 0 0;padding:20px 20px calc(env(safe-area-inset-bottom,0px) + 20px);max-height:92%;overflow-y:auto}
+@media(min-width:640px){.modal{align-items:center}.sheet{border-radius:24px}}
+.sh{display:flex;justify-content:space-between;align-items:center;margin-bottom:16px}.sh h2{margin:0;font-size:20px}
+.x{width:32px;height:32px;border-radius:50%;background:var(--inp);color:var(--mu);display:flex;align-items:center;justify-content:center}
+.cats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.cat{padding:12px;border-radius:16px;border:2px solid var(--bd);color:var(--mu);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center;gap:6px}
+.cat.on.fish-c{border-color:var(--sky);color:var(--sky)}.cat.on.rep-c2{border-color:var(--grn);color:var(--grn)}
+.prev{display:flex;flex-direction:column;align-items:center;margin-bottom:16px}
+.pw{position:relative}.pw .pic{width:112px;height:112px;font-size:44px}
+.cam,.rm{position:absolute;bottom:-4px;width:36px;height:36px;border-radius:50%;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,.25)}
+.cam{right:-4px;background:var(--sky)}.rm{left:-4px;background:var(--red);display:none}
+.prev p{font-size:12px;color:var(--mu);margin:8px 0 0}
+.fld{margin-bottom:16px}.fld label.l{display:block;font-size:12px;font-weight:600;color:var(--mu);margin-bottom:6px}
+.fld input{width:100%;padding:12px 14px;border-radius:12px;border:0;background:var(--inp);color:var(--tx);font-size:16px;min-height:44px;outline:none}
+.inl{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--mu);white-space:nowrap}
+.chk{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--tx);margin-bottom:10px;cursor:pointer}.fld .chk input{width:20px;height:20px;min-height:0;padding:0}
+#f-days:disabled{opacity:.4}
+.btns{display:flex;gap:10px;margin-top:8px}.btns button{flex:1;padding:12px;border-radius:12px;font-weight:600}
+.cancel{background:var(--inp);color:var(--mu)}.save{background:var(--sky);color:#fff}
+ol{padding-left:20px;font-size:14px;color:var(--mu);line-height:1.8}
+</style>
+</head>
+<body>
+<header><div class="bar">
+  <div style="display:flex;align-items:center"><div class="logo" id="logo"></div><div><h1>飼育リマインダー</h1><p class="sub" id="count">0個の飼育ケースを管理中</p></div></div>
+  <div><button class="hb p" data-act="add" title="追加" id="b-add"></button></div>
+</div></header>
+
+<main>
+  <div id="grid"></div>
+  <div id="empty"><h3>登録されていません</h3><div style="font-size:14px">右上の「＋」から、熱帯魚や爬虫類の管理を追加しましょう。</div><button class="main fish" data-act="add">追加する</button></div>
+</main>
+
+<input type="file" id="img-direct" accept="image/*" hidden>
+
+<div class="modal" id="m-form"><div class="sheet">
+  <div class="sh"><h2 id="m-title">新規登録</h2><button class="x" data-act="close" id="b-x1"></button></div>
+  <form id="form" novalidate>
+    <input type="hidden" id="f-id"><input type="hidden" id="f-cat" value="fish">
+    <div class="cats">
+      <button type="button" class="cat fish-c" data-act="cat" data-cat="fish" id="c-fish"></button>
+      <button type="button" class="cat rep-c2" data-act="cat" data-cat="reptile" id="c-rep"></button>
+    </div>
+    <div class="prev"><div class="pw">
+      <div class="pic fish" id="f-pic"><span id="f-ph"></span><img id="f-img" alt="" style="display:none"></div>
+      <label class="cam" for="f-file" id="f-cam"></label>
+      <button type="button" class="rm" data-act="rmimg" id="f-rm" title="写真を削除"></button>
+    </div><input type="file" id="f-file" accept="image/*" hidden><p>写真を撮影・選択（任意）</p></div>
+    <div class="fld"><label class="l">名称（省略可）</label><input type="text" id="f-name" maxlength="30" placeholder="例: メイン水槽, レオパケージ"></div>
+    <div class="fld"><label class="l" id="l-target"></label><label class="chk"><input type="checkbox" id="f-notarget"><span>目標日数を設定しない（－）</span></label><div class="inl"><input type="number" id="f-days" inputmode="numeric" min="1" max="99" value="7">日に1回</div></div>
+    <div class="fld"><label class="l" id="l-last"></label><input type="datetime-local" id="f-last" min="2000-01-01T00:00"></div>
+    <div class="btns"><button type="button" class="cancel" data-act="close">キャンセル</button><button type="submit" class="save" id="f-save">保存する</button></div>
+  </form>
+</div></div>
+
+
+<script>
+(function () {
+'use strict';
+var KEY = 'aquarium_water_change_tanks_v8', DAY = 86400000;
+var tanks = [], imgTarget = null;
+
+var P = { // アイコン（外部フォント不要のインラインSVG）
+  drop:'<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 5 12 2.5C11.5 5 10 7.400 8 9.500 6 11.100 5 13 5 15a7 7 0 0 0 7 7z"/>',
+  plus:'<path d="M5 12h14M12 5v14"/>',
+  x:'<path d="M18 6 6 18M6 6l12 12"/>',
+  up:'<path d="M12 3v12M8 7l4-4 4 4M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-7"/>',
+  cam:'<path d="M14.500 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3z"/><circle cx="12" cy="13" r="3"/>',
+  pen:'<path d="M17 3a2.850 2.850 0 1 1 4 4L7.500 20.500 2 22l1.500-5.500z"/>',
+  trash:'<path d="M3 6h18M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/>',
+  undo:'<path d="M3 12a9 9 0 1 0 9-9 9.750 9.750 0 0 0-6.740 2.740L3 8M3 3v5h5"/>',
+  _:''
+};
+var FA = { // Font Awesome Free（元のデザイン）をインライン化
+  fish:['0 0 576 512','M180.5 141.5C219.7 108.5 272.6 80 336 80s116.3 28.5 155.5 61.5c39.1 33 66.9 72.4 81 99.8 4.7 9.2 4.7 20.1 0 29.3-14.1 27.4-41.9 66.8-81 99.8-39.2 33.1-92 61.5-155.5 61.5s-116.3-28.5-155.5-61.5c-16.2-13.7-30.5-28.5-42.7-43.1l-89.7 52.3c-12.5 7.3-28.4 5.3-38.7-4.9s-12.4-26-5.3-38.6L50 256 4.2 175.9c-7.2-12.6-5-28.4 5.3-38.6s26.1-12.2 38.7-4.9l89.7 52.3c12.2-14.6 26.5-29.4 42.7-43.1zM448 256a32 32 0 1 0-64 0 32 32 0 1 0 64 0'],
+  frog:['0 0 576 512','M368 32c41.7 0 75.9 31.8 79.7 72.5l85.6 26.3c25.4 7.8 42.8 31.3 42.8 57.9 0 21.8-11.7 41.9-30.7 52.7l-144.5 82.1 92.5 92.5h50.7c17.7 0 32 14.3 32 32s-14.3 32-32 32h-64c-8.5 0-16.6-3.4-22.6-9.4L346.9 360.2c11.7-36 3.2-77.1-25.4-105.7-40.6-40.6-106.3-40.6-146.9-.1l-73.6 70c-6.4 6.1-6.7 16.2-.6 22.6s16.2 6.6 22.6.6l73.8-70.2.1-.1.1-.1c3.5-3.5 7.3-6.6 11.3-9.2 27.9-18.5 65.9-15.4 90.5 9.2 24.7 24.7 27.7 62.9 9 90.9-2.6 3.8-5.6 7.5-9 10.9l-37 37H352c17.7 0 32 14.3 32 32s-14.3 32-32 32H64c-35.3 0-64-28.7-64-64C0 249.6 127 112.9 289.3 97.5 296.2 60.2 328.8 32 368 32m0 104a24 24 0 1 0 0-48 24 24 0 1 0 0 48'],
+  spoon:['0 0 512 512','M245.8 220.9c-14.5-17.6-21.8-39.2-21.8-60.8C224 79.9 320-.1 416-.1c53 0 96 43 96 96 0 96-80 192-160.2 192-21.6 0-43.2-7.3-60.8-21.8L54.6 502.6c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3z']
+};
+var SHOVEL = '<svg class="i" viewBox="0 0 24 24" style="width:18px;height:18px"><path d="M17.870 2.870 21.130 6.130 19.010 8.250 15.750 4.990z"/><path d="M17.380 6.620 6.600 17.400"/><path fill="currentColor" d="M4.900 15.700 8.300 19.100C8 20.500 5.500 21.200 3 21.500 3.300 18.800 4 16.800 4.900 15.700z"/></svg>';
+function ic(n) { if (FA[n]) return '<svg class="i f" viewBox="' + FA[n][0] + '"><path d="' + FA[n][1] + '"/></svg>'; return '<svg class="i" viewBox="0 0 24 24">' + P[n] + '</svg>'; }
+var CAT = {
+  fish: { act:'水替え', sub:'給餌', noun:'水槽', icon:'fish', cls:'fish', subIcon:ic('spoon'), t:'目標水替え周期 (日数)', l:'前回の水替え日時', color:'#0ea5e9' },
+  reptile: { act:'餌やり', sub:'清掃', noun:'ケージ', icon:'frog', cls:'rep', subIcon:SHOVEL, t:'目標給餌周期 (日数)', l:'前回の餌やり日時', color:'#16a34a' }
+};
+
+function $(id) { return document.getElementById(id); }
+function esc(s) { return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) { return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+function pad(n) { return n < 10 ? '0' + n : '' + n; }
+function localVal(d) { return d.getFullYear() + '-' + pad(d.getMonth()+1) + '-' + pad(d.getDate()) + 'T' + pad(d.getHours()) + ':' + pad(d.getMinutes()); }
+function time(iso) { var t = new Date(iso).getTime(); return isNaN(t) ? null : t; }
+function days(iso) { var t = time(iso); return t === null ? 0 : Math.max(0, Math.floor((Date.now() - t) / DAY)); }
+
+function load() { try { var a = JSON.parse(localStorage.getItem(KEY) || '[]'); tanks = Array.isArray(a) ? a : []; } catch (e) { tanks = []; } }
+function save() { try { localStorage.setItem(KEY, JSON.stringify(tanks)); return true; } catch (e) { alert('保存できませんでした。画像を小さくするか、不要な項目を削除してください。'); return false; } }
+
+function render() {
+  $('count').textContent = tanks.length + '個の飼育ケースを管理中';
+  $('empty').style.display = tanks.length ? 'none' : 'block';
+  $('grid').innerHTML = tanks.map(function (t, i) {
+    var c = CAT[t.category] || CAT.fish, d = days(t.lastChanged), hasT = t.targetDays >= 1;
+    var name = t.name && t.name.trim() ? t.name : c.noun + ' ' + (i + 1);
+    var lt = time(t.lastChanged);
+    var ds = lt === null ? '-' : new Date(lt).toLocaleString('ja-JP', { month:'short', day:'numeric', hour:'2-digit', minute:'2-digit' });
+    var id = esc(t.id);
+    return '<div class="card ' + (c.cls === 'rep' ? 'rep-c' : '') + '" data-id="' + id + '">' +
+      '<div class="top"><div class="thumb"><div class="pic ' + c.cls + '">' + (t.image ? '<img alt="" src="' + t.image + '">' : ic(c.icon)) + '</div>' +
+      '<button class="mini" style="left:-6px" data-act="photo" title="写真を変更">' + ic('cam') + '</button>' +
+      '<button class="mini" style="right:-6px" data-act="edit" title="編集">' + ic('pen') + '</button></div>' +
+      '<div class="info"><div class="row"><h3>' + esc(name) + '</h3><div class="act"><div class="sbox"><button class="sbtn" data-act="sub" title="' + c.sub + 'を記録">' + c.subIcon + '</button><small>' + c.sub + ': ' + days(t.subActionDate || t.lastChanged) + '日</small></div>' +
+      '<button class="del" data-act="del" title="削除">' + ic('trash') + '</button></div></div>' +
+      '<p class="last">前回: ' + ds + '</p>' + (hasT ? '<span class="badge">目標: ' + t.targetDays + '日に1回</span>' : '<span class="badge none">目標: －</span>') + '</div></div>' +
+      '<div class="count"><span>' + c.act + '後</span><div><b>' + d + '</b> <span>日経過</span></div></div>' +
+      '<button class="main ' + c.cls + '" data-act="done">' + ic('undo') + '<span>' + c.act + '完了 (0日にリセット)</span></button></div>';
+  }).join('');
+}
+
+function find(id) { for (var i = 0; i < tanks.length; i++) if (tanks[i].id === id) return tanks[i]; return null; }
+function openM(id) { $(id).classList.add('open'); }
+function closeAll() { $('m-form').classList.remove('open'); }
+
+function setCat(cat) {
+  var c = CAT[cat] || CAT.fish; $('f-cat').value = cat;
+  $('c-fish').classList.toggle('on', cat === 'fish'); $('c-rep').classList.toggle('on', cat === 'reptile');
+  $('f-pic').className = 'pic ' + c.cls; $('f-ph').innerHTML = ic(c.icon);
+  $('l-target').textContent = c.t; $('l-last').textContent = c.l;
+  $('f-cam').style.background = c.color; $('f-save').style.background = c.color;
+}
+function setPreview(src) {
+  var img = $('f-img');
+  if (src) { img.src = src; img.style.display = 'block'; $('f-ph').style.display = 'none'; $('f-rm').style.display = 'flex'; }
+  else { img.removeAttribute('src'); img.style.display = 'none'; $('f-ph').style.display = 'inline'; $('f-rm').style.display = 'none'; }
+}
+function syncTarget() { $('f-days').disabled = $('f-notarget').checked; }
+function lastLimits() { $('f-last').max = localVal(new Date(Date.now() + DAY)); } // ピッカーの範囲を固定（無限ロール防止）
+
+function openForm(t) {
+  $('m-title').textContent = t ? '設定の編集' : '新規登録';
+  $('f-id').value = t ? t.id : '';
+  $('f-name').value = t ? (t.name || '') : '';
+  $('f-days').value = t && t.targetDays >= 1 ? t.targetDays : 7;
+  $('f-notarget').checked = !!t && !(t.targetDays >= 1); syncTarget();
+  lastLimits();
+  var lt = t && time(t.lastChanged) !== null ? new Date(t.lastChanged) : new Date();
+  $('f-last').value = localVal(lt);
+  $('f-file').value = '';
+  setCat(t ? (t.category || 'fish') : 'fish');
+  setPreview(t ? t.image : null);
+  openM('m-form');
+}
+
+function compress(file, cb) {
+  var r = new FileReader();
+  r.onerror = function () { alert('画像を読み込めませんでした。'); };
+  r.onload = function (e) {
+    var im = new Image();
+    im.onerror = function () { alert('この画像形式は読み込めませんでした。'); };
+    im.onload = function () {
+      var s = Math.min(1, 400 / Math.max(im.width, im.height)), w = Math.round(im.width * s), h = Math.round(im.height * s);
+      var cv = document.createElement('canvas'); cv.width = w; cv.height = h;
+      cv.getContext('2d').drawImage(im, 0, 0, w, h); cb(cv.toDataURL('image/jpeg', 0.8));
+    };
+    im.src = e.target.result;
+  };
+  r.readAsDataURL(file);
+}
+
+/* ボタンは1か所のイベント委譲で処理（インラインonclickやエスケープ問題を回避） */
+document.addEventListener('click', function (e) {
+  var b = e.target.closest ? e.target.closest('[data-act]') : null;
+  if (!b) return;
+  var act = b.getAttribute('data-act'), card = b.closest('.card'), t = card ? find(card.getAttribute('data-id')) : null;
+  if (act === 'add') openForm(null);
+  else if (act === 'close') closeAll();
+  else if (act === 'cat') setCat(b.getAttribute('data-cat'));
+  else if (act === 'rmimg') { $('f-file').value = ''; setPreview(null); }
+  else if (act === 'edit' && t) openForm(t);
+  else if (act === 'done' && t) { t.lastChanged = new Date().toISOString(); save(); render(); }
+  else if (act === 'sub' && t) { t.subActionDate = new Date().toISOString(); save(); render(); }
+  else if (act === 'photo' && t) { imgTarget = t.id; $('img-direct').click(); }
+  else if (act === 'del' && t) {
+    if (confirm('「' + (t.name || 'この項目') + '」を削除しますか？')) { tanks = tanks.filter(function (x) { return x !== t; }); save(); render(); }
+  }
+});
+$('m-form').addEventListener('click', function (e) { if (e.target === this) closeAll(); });
+
+$('f-notarget').addEventListener('change', syncTarget);
+$('f-file').addEventListener('change', function (e) { var f = e.target.files[0]; if (f) compress(f, setPreview); });
+$('img-direct').addEventListener('change', function (e) {
+  var inp = e.target, f = inp.files[0], id = imgTarget; if (!f || !id) return;
+  compress(f, function (data) { var t = find(id); if (t) { t.image = data; save(); render(); } imgTarget = null; inp.value = ''; });
+});
+
+$('form').addEventListener('submit', function (e) {
+  e.preventDefault();
+  var id = $('f-id').value, cat = $('f-cat').value, name = $('f-name').value.trim();
+  var td = parseInt($('f-days').value, 10); if (!(td >= 1)) td = 7; if (td > 99) td = 99;
+  if ($('f-notarget').checked) td = null;
+  var d = $('f-last').value ? new Date($('f-last').value) : new Date(); if (isNaN(d.getTime())) d = new Date();
+  var last = d.toISOString(), image = $('f-img').style.display === 'none' ? null : $('f-img').src;
+  var backup = JSON.stringify(tanks), t = id ? find(id) : null;
+  if (t) { t.name = name; t.category = cat; t.targetDays = td; t.lastChanged = last; t.image = image; t.subActionDate = t.subActionDate || last; }
+  else tanks.push({ id: 't' + Date.now(), name: name, category: cat, targetDays: td, lastChanged: last, subActionDate: last, image: image });
+  if (!save()) { tanks = JSON.parse(backup); return; }
+  render(); closeAll();
+});
+
+// 初期化（アイコン設定 → データ読込 → 描画）
+$('logo').innerHTML = ic('drop'); $('b-add').innerHTML = ic('plus');
+$('b-x1').innerHTML = ic('x'); $('f-cam').innerHTML = ic('cam'); $('f-rm').innerHTML = ic('trash');
+$('c-fish').innerHTML = ic('fish') + '<span>熱帯魚 (水替え)</span>'; $('c-rep').innerHTML = ic('frog') + '<span>爬虫類 (餌やり)</span>';
+load(); render();
+setInterval(render, 60000);
+document.addEventListener('visibilitychange', function () { if (!document.hidden) render(); });
+window.addEventListener('pageshow', render);
+
+})();
+</script>
+</body>
+</html>
